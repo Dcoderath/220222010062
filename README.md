@@ -13,7 +13,6 @@ This is a React project that displays stock prices and their correlation data us
 ### Tablet View  
 ![Tablet Screenshot](public/screenshots/Screenshot-tablet.png)
 
-
 ## Getting Started
 
 Clone the repository or download the project files.
