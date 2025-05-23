@@ -1,16 +1,17 @@
 # Stock Aggregator
 
 This is a React project that displays stock prices and their correlation data using charts and tables.
+
 ## Screenshots
 
 ### Desktop View  
-![Desktop Screenshot](public/screenshots/Screenshot-desktop.png)
+![Desktop Screenshot](./public/screenshots/Screenshot-desktop.png)
 
 ### Mobile View  
-![Mobile Screenshot](public/screenshots/Screenshot-mobile.png)
+![Mobile Screenshot](./public/screenshots/Screenshot-mobile.png)
 
 ### Tablet View  
-![Tablet Screenshot](public/screenshots/Screenshot-tablet.png)
+![Tablet Screenshot](./public/screenshots/Screenshot-tablet.png)
 
 ## Getting Started
 
