@@ -1,3 +1,4 @@
+// CorrelationHeatmap.tsx
 import React, { useEffect, useState } from "react";
 import { fetchCorrelationData } from "../services/api";
 
@@ -13,9 +14,7 @@ const CorrelationHeatmap: React.FC<CorrelationHeatmapProps> = ({ minutes }) => {
       try {
         const data = await fetchCorrelationData();
         setMatrix(data);
-      } catch (error) {
-        console.error("Error fetching correlation data:", error);
-      }
+      } catch (error) {}
     }
     loadData();
   }, [minutes]);
@@ -24,30 +23,30 @@ const CorrelationHeatmap: React.FC<CorrelationHeatmapProps> = ({ minutes }) => {
     width: "100%",
     overflowX: "auto",
     margin: "1rem 0",
-    fontFamily: "Arial, sans-serif",
   };
 
   const tableStyle: React.CSSProperties = {
     borderCollapse: "collapse",
     width: "100%",
     minWidth: 320,
+    color: "#e0e0e0",
   };
 
   const thTdStyle: React.CSSProperties = {
-    border: "1px solid #ddd",
+    border: "1px solid #333",
     padding: 8,
     textAlign: "center",
     whiteSpace: "nowrap",
   };
 
   const thStyle: React.CSSProperties = {
-    backgroundColor: "#f2f2f2",
-    fontWeight: "bold",
+    backgroundColor: "#2c2c2c",
+    fontWeight: "700",
   };
 
   const rowHeaderStyle: React.CSSProperties = {
-    fontWeight: "bold",
-    backgroundColor: "#f9f9f9",
+    fontWeight: "700",
+    backgroundColor: "#1f1f1f",
   };
 
   return (
@@ -74,7 +73,8 @@ const CorrelationHeatmap: React.FC<CorrelationHeatmapProps> = ({ minutes }) => {
                     style={{
                       ...thTdStyle,
                       backgroundColor: `rgba(136, 132, 216, ${value})`,
-                      color: value > 0.5 ? "white" : "black",
+                      color: value > 0.5 ? "#121212" : "#e0e0e0",
+                      fontWeight: "600",
                     }}
                   >
                     {value.toFixed(2)}
@@ -85,7 +85,7 @@ const CorrelationHeatmap: React.FC<CorrelationHeatmapProps> = ({ minutes }) => {
           </tbody>
         </table>
       ) : (
-        <p>Loading correlation data...</p>
+        <p style={{ color: "#bbb", textAlign: "center" }}>Loading correlation data...</p>
       )}
     </div>
   );
