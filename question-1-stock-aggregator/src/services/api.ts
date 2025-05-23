@@ -1,14 +1,9 @@
-// src/services/api.ts
-
-// Define the PricePoint type
 export interface PricePoint {
   time: string;
   price: number;
 }
 
-// Dummy example function to fetch stock prices
 export async function fetchStockPrices(): Promise<PricePoint[]> {
-  // Simulate fetching data from an API or backend
   return new Promise((resolve) => {
     setTimeout(() => {
       resolve([
@@ -21,16 +16,13 @@ export async function fetchStockPrices(): Promise<PricePoint[]> {
   });
 }
 
-// Define type for correlation matrix
 export type CorrelationMatrix = {
   [stockSymbol: string]: {
     [otherStockSymbol: string]: number;
   };
 };
 
-// Dummy example function to fetch correlation data
 export async function fetchCorrelationData(): Promise<CorrelationMatrix> {
-  // Simulate fetching correlation matrix data from an API or backend
   return new Promise((resolve) => {
     setTimeout(() => {
       resolve({
