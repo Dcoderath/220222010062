@@ -20,4 +20,3 @@ cd question-1-stock-aggregator
 npm install
 npm start
 
-....
