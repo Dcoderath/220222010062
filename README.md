@@ -9,7 +9,7 @@ This is a React project that displays stock prices and their correlation data us
 ![Tablet Screenshot](question-1-stock-aggregator/public/screenshots/Screenshot-tablet.png)
 
 
-## Getting Started
+##  Started
 
 Clone the repository or download the project files.
 
@@ -20,5 +20,3 @@ cd question-1-stock-aggregator
 npm install
 npm start
 
-
-....
